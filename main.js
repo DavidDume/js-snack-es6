@@ -1,7 +1,7 @@
 const bici = [
     {
        nome: 'bici1',
-       peso:  20
+       peso:  28
     },
     {
         nome: 'bici2',
@@ -17,17 +17,27 @@ function pesoMinore(arr) {
 
 }
 
-let element = 0;
+let element = bici[0].peso;
 
 for (let index = 0; index < bici.length; index++) {
 
-    if(element < bici[index].peso) {
+    if(element > bici[index].peso) {
         element = bici[index].peso;
     }
 
 }
 
 console.log(element);
+
+
+
+
+
+
+
+
+
+
 
 
 /* ESERCIZIO 2 */
