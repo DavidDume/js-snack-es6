@@ -5,7 +5,7 @@ const bici = [
     },
     {
         nome: 'bici2',
-        peso:  30
+        peso:  10
      },
      {
         nome: 'bici3',
@@ -13,21 +13,19 @@ const bici = [
      }
 ];
 
-function pesoMinore(arr) {
-
-}
-
 let element = bici[0].peso;
+let obj = {};
 
 for (let index = 0; index < bici.length; index++) {
 
     if(element > bici[index].peso) {
         element = bici[index].peso;
+        obj = bici[index];
     }
 
 }
 
-console.log(element);
+console.log(obj);
 
 
 
@@ -66,8 +64,9 @@ for (let index = 0; index < squadre.length; index++) {
     squadre[index].goal = Math.floor(Math.random() * (5 - 1) + 1);
 
     let {nome, falli} = squadre[index];
-    arr.push(nome);
-    arr.push(falli);
+    let newObj = {nome, falli};
+    arr.push(newObj);
+
 }
 
 console.log(arr);
